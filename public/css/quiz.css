@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Montserrat:wght@500&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    background: #74b3ce;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.quiz-container {
+    display: flex;
+    justify-content: center;
+}
+
+.question-box {
+    background-color: #DBDBDB;
+    border: 5px solid #7e7e7e;
+    box-shadow: inset 0 0 10px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0;
+    width: 700px;
+    height: 100%;
+    margin-top: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+input {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.question-box label {
+    display: inline-block; /* Para permitir que o texto flua naturalmente */
+    overflow-wrap: break-word; /* Para browsers modernos */
+    word-break: break-all; /* Para browsers mais antigos */
+    text-align: left;
+}
+
+
+button {
+    padding: 10px;
+    font-family: 'Micro 5', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    margin-top: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #1034A6;
+    color: #d2d2d2;
+    border: none;
+}
+
+button:hover {
+        background-color: #1e90ff;
+        transition: .3s linear;
+        box-shadow: inset 0 0 5px #DBDBDB;
+}

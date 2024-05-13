@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Pergunta</title>
+  <link rel="stylesheet" href="/css/create_questions.css" type="text/css"/>
+</head>
+<body>
+  <div class="create-container">
+    <form action="/admin/create" method="post">
+      <div class="create-box">
+        <div class="question">
+          <h1>CRIAR NOVA PERGUNTA</h1>
+          <label for="question">PERGUNTA:</label><br>
+          <textarea id="question" name="question" rows="4" cols="50" required></textarea><br>
+        </div>
+
+        <div class="options">
+          <label for="option1">OPÇÃO 1:</label><br>
+          <textarea class="textoption" id="option1" name="option1" required></textarea><br>
+          <label for="option2">OPÇÃO 2:</label><br>
+          <textarea class="textoption" id="option2" name="option2" required></textarea><br>
+          <label for="option3">OPÇÃO 3:</label><br>
+          <textarea class="textoption" id="option3" name="option3" required></textarea><br>
+        </div>
+
+        <div class="others">
+          <label for="correct_answer">RESPOSTA CORRETA:</label><br>
+          <select id="correct_answer" name="correct_answer" required>
+            <option value="option1">OPÇÃO 1</option>
+            <option value="option2">OPÇÃO 2</option>
+            <option value="option3">OPÇÃO 3</option>
+          </select>
+
+          <label for="bimester">BIMESTRE:</label>
+          <select id="bimester" name="bimester">
+            <option value="1">1º BIMESTRE</option>
+            <option value="2">2º BIMESTRE</option>
+            <option value="3">3º BIMESTRE</option>
+            <option value="4">4º BIMESTRE</option>
+          </select>
+          <button type="submit">CRIAR PERGUNTA</button>
+        </div>
+      </div>
+    </form>  
+    
+      <div class="results-link">
+        <a href="/admin/all-results"><button>VER RESULTADOS</button></a>
+      </div>
+  </div>
+</body>
+</html>

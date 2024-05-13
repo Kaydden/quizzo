@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/css/quiz.css" type="text/css"/>
+</head>
+<body>
+    <div class="quiz-container">
+        <form action="/quiz/submit" method="post">
+            <!-- Container para a pergunta atual -->
+            <div class="question-container">
+                <% questions.forEach((question, index) => { %>
+                    <div class="question-box" <% if (index !== 0) { %>style="display: none;"<% } %>>
+                        <p><%= question.question %></p>
+                        <label>
+                            <input type="radio" name="<%= question.id %>" value="option1">
+                            <%= question.option1 %>
+                        </label><br>
+                        <label>
+                            <input type="radio" name="<%= question.id %>" value="option2">
+                            <%= question.option2 %>
+                        </label><br>
+                        <label>
+                            <input type="radio" name="<%= question.id %>" value="option3">
+                            <%= question.option3 %>
+                        </label><br>
+                    </div>
+                <% }) %>
+            </div>
+            <!-- Botão para avançar para a próxima pergunta -->
+            <button id="next-question-btn" type="button">Próxima Pergunta</button>
+            <!-- Botão para enviar respostas (inicialmente oculto) -->
+            <button id="submit-btn" type="submit" style="display: none;">ENVIAR RESPOSTAS</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questionBoxes = document.querySelectorAll('.question-box');
+            const nextQuestionBtn = document.getElementById('next-question-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            let currentQuestionIndex = 0;
+
+            // Função para mostrar a próxima pergunta e ocultar a atual
+            function showNextQuestion() {
+                questionBoxes[currentQuestionIndex].style.display = 'none';
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questionBoxes.length) {
+                    questionBoxes[currentQuestionIndex].style.display = 'block';
+                } else {
+                    // Todas as perguntas foram respondidas, mostrar o botão de enviar respostas
+                    submitBtn.style.display = 'block';
+                    // Ocultar o botão de próxima pergunta
+                    nextQuestionBtn.style.display = 'none';
+                }
+            }
+
+            // Adicionar evento de clique ao botão de próxima pergunta
+            nextQuestionBtn.addEventListener('click', showNextQuestion);
+        });
+    </script>
+</body>
+</html>

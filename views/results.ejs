@@ -1,0 +1,25 @@
+<!-- views/results.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados</title>
+  <link rel="stylesheet" href="/css/results.css" type="text/css"/>
+</head>
+<body>
+  <div class="results-container">
+  <h1>RESULTADO DO QUIZ</h1>
+
+    <% if (latestResult) { %>
+      <h2>SEU RESULTADO MAIS RECENTE:</h2>
+      <p>PONTUAÇÃO: <%= latestResult.score %></p>
+      <% } else { %>
+        <p>Você ainda não realizou o quiz.</p>
+        <% } %>
+
+        <a href="/select-bimester"><button>CLIQUE AQUI PARA VOLTAR A TELA PRINCIPAL</button></a>
+      </div>
+</body>
+</html>

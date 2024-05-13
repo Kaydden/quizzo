@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecionar Bimestre</title>
+  <link rel="stylesheet" href="/css/select_bimester.css" type="text/css"/>
+</head>
+<body>
+  <div class="bimester-box">
+    <h1>SELECIONE O BIMESTRE</h1>
+    <form action="/load-questions" method="get">
+    <input type="radio" id="bimester1" name="bimester" value="1">
+    <label for="bimester1">1º BIMESTRE</label><br>
+    <input type="radio" id="bimester2" name="bimester" value="2">
+    <label for="bimester2">2º BIMESTRE</label><br>
+    <input type="radio" id="bimester3" name="bimester" value="3">
+    <label for="bimester3">3º BIMESTRE</label><br>
+    <input type="radio" id="bimester4" name="bimester" value="4">
+    <label for="bimester4">4º BIMESTRE</label><br>
+    <button type="submit" class="enviar_opcao">SELECIONAR</button>
+  </form>
+</div>
+</body>
+</html>

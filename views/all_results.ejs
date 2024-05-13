@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado dos usuários</title>
+    <link rel="stylesheet" href="/css/all-results.css" type="text/css"/>
+</head>
+<body>
+
+  <div class="results-container">
+    <% if (userResults.length > 0) { %>
+      <h2>RESULTADOS DOS  USUÁRIOS:</h2>
+    <ul>
+      <% userResults.forEach(userResult => { %>
+        <li>
+          <strong>USUÁRIO:</strong> <span><%= userResult.nickname %></span>
+          <% if (userResult.score !== null) { %>
+            | <strong>PONTUAÇÃO:</strong> <span><%= userResult.score %></span>
+          <% } else { %>
+            | <span>SEM RESULTADOS</span>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <p>Nenhum resultado de usuário encontrado.</p>
+  <% } %>
+
+  <a href="/admin/create"><button>VOLTAR PARA CRIAÇÃO  DE PERGUNTAS</button></a>
+</div>
+</body>
+</html>
