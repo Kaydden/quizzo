@@ -125,11 +125,11 @@ app.get('/quiz/results', async (req, res) => {
 
 
 app.post('/admin/create', async (req, res) => {
-  const { question, option1, option2, option3, correct_answer, bimester} = req.body;
+  const { question, option1, option2, option3, option4, correct_answer, bimester} = req.body;
 
   try {
-    const questionInsertQuery = 'INSERT INTO questions (question, option1, option2, option3, correct_answer, bimester) VALUES ($1, $2, $3, $4, $5, $6)';
-    await pool.query(questionInsertQuery, [question, option1, option2, option3, correct_answer, bimester]);
+    const questionInsertQuery = 'INSERT INTO questions (question, option1, option2, option3, option4, correct_answer, bimester) VALUES ($1, $2, $3, $4, $5, $6)';
+    await pool.query(questionInsertQuery, [question, option1, option2, option3, option4, correct_answer, bimester]);
 
     res.send('Pergunta criada com sucesso!');
   } catch (error) {
