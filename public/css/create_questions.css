@@ -108,3 +108,63 @@ a {
     border-left: 1px solid #7e7e7e;
     padding-left: 15px;
 }
+
+@media screen and (max-width: 768px) {
+
+    * {
+        border: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+    .create-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .create-box {
+        margin-top: 1rem;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    
+    textarea, .textoption, select, button {
+        width: 100%;
+        height: 50px;
+        max-width: none;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    label {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .results-link {
+        border: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .options {
+        border: 0;
+        padding: 0;
+    }
+
+    .question {
+        border: 0;
+        padding: 0;
+    }
+
+    select {
+        width: 100%;
+        font-size: 1.2em;
+    }
+}

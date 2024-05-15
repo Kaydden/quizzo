@@ -71,3 +71,14 @@ button:hover {
         transition: .3s linear;
         box-shadow: inset 0 0 5px #DBDBDB;
 }
+
+@media screen and (max-width: 768px) {
+    .question-box {
+        width: 90%
+    }
+
+    .quiz-container {
+        align-items: center;
+        justify-content: center;
+    }
+}
